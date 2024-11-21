@@ -302,10 +302,10 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 
 		   String^ CensorBadWords(String^ input, System::Collections::Generic::List<String^>^ badWords);
 
-		   void CensorFuck(String^% input);
-		   void CensorShit(String^% input);
-		   void CensorAss(String^% input);
-		   void CensorBadWordsInMessage(String^% message);
+		   void CensorFuck(String^% input, int% bdwordcount);
+		   void CensorShit(String^% input, int% bdwordcount);
+		   void CensorAss(String^% input, int% bdwordcount);
+		   void CensorBadWordsInMessage(String^% message, int% bdwordcount);
 
 		   void UpdateDataGridView();
 		   bool PromptUserForSignupConfirmation(String^ username);

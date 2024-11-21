@@ -49,9 +49,9 @@ Class Server.ServerForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     UpdateLabel(String): PrivateScope, Public, HideBySig
     ProcessClient(Object): PrivateScope, Public, HideBySig
     CensorBadWords(String, List`1): PrivateScope, Public, HideBySig
-    CensorFuck(String&): PrivateScope, Public, HideBySig
-    CensorShit(String&): PrivateScope, Public, HideBySig
-    CensorAss(String&): PrivateScope, Public, HideBySig
-    CensorBadWordsInMessage(String&): PrivateScope, Public, HideBySig
+    CensorFuck(String&, Int32&): PrivateScope, Public, HideBySig
+    CensorShit(String&, Int32&): PrivateScope, Public, HideBySig
+    CensorAss(String&, Int32&): PrivateScope, Public, HideBySig
+    CensorBadWordsInMessage(String&, Int32&): PrivateScope, Public, HideBySig
     UpdateDataGridView(): PrivateScope, Public, HideBySig
     PromptUserForSignupConfirmation(String): PrivateScope, Public, HideBySig

@@ -259,43 +259,40 @@ String^ Server::ServerForm::CensorBadWords(String^ input, System::Collections::G
     }
     return censoredMessage;
 }
-
-void Server::ServerForm::CensorBadWordsInMessage(String^% message) {
-    // —кидаЇмо л≥чильник перед обробкою
-    bdwordcount = 0;
-
+void Server::ServerForm::CensorBadWordsInMessage(String^% message, int% bdwordcount) {
     // ¬икликаЇмо окрем≥ функц≥њ дл€ кожного слова
-    CensorFuck(message);
-    CensorShit(message);
-    CensorAss(message);
+    CensorFuck(message, bdwordcount);
+    CensorShit(message, bdwordcount);
+    CensorAss(message, bdwordcount);
 }
 
-
-void Server::ServerForm::CensorFuck(String^% input) {
+void Server::ServerForm::CensorFuck(String^% input, int% bdwordcount) {
     String^ pattern = "\\bfuck\\b";
     int count = System::Text::RegularExpressions::Regex::Matches(input, pattern, System::Text::RegularExpressions::RegexOptions::IgnoreCase)->Count;
 
     if (count > 0) {
         input = System::Text::RegularExpressions::Regex::Replace(input, pattern, "***", System::Text::RegularExpressions::RegexOptions::IgnoreCase);
-        bdwordcount += count; // «б≥льшуЇмо л≥чильник
+        bdwordcount += count; // «б≥льшуЇмо локальний л≥чильник
     }
 }
-void Server::ServerForm::CensorShit(String^% input) {
+
+void Server::ServerForm::CensorShit(String^% input, int% bdwordcount) {
     String^ pattern = "\\bshit\\b";
     int count = System::Text::RegularExpressions::Regex::Matches(input, pattern, System::Text::RegularExpressions::RegexOptions::IgnoreCase)->Count;
 
     if (count > 0) {
         input = System::Text::RegularExpressions::Regex::Replace(input, pattern, "***", System::Text::RegularExpressions::RegexOptions::IgnoreCase);
-        bdwordcount += count; // «б≥льшуЇмо л≥чильник
+        bdwordcount += count; // «б≥льшуЇмо локальний л≥чильник
     }
 }
-void Server::ServerForm::CensorAss(String^% input) {
+
+void Server::ServerForm::CensorAss(String^% input, int% bdwordcount) {
     String^ pattern = "\\bass\\b";
     int count = System::Text::RegularExpressions::Regex::Matches(input, pattern, System::Text::RegularExpressions::RegexOptions::IgnoreCase)->Count;
 
     if (count > 0) {
         input = System::Text::RegularExpressions::Regex::Replace(input, pattern, "***", System::Text::RegularExpressions::RegexOptions::IgnoreCase);
-        bdwordcount += count; // «б≥льшуЇмо л≥чильник
+        bdwordcount += count; // «б≥льшуЇмо локальний л≥чильник
     }
 }
 
@@ -417,8 +414,11 @@ void Server::ServerForm::ProcessClient(Object^ clientObj) {
                     String^ modifiedData = data->Substring(2);
 
                     if (moderate) {
+                        // Ћокальний л≥чильник дл€ поточного кл≥Їнта
+                        int localBdwordcount = 0;
+
                         // ÷ензуруЇмо пов≥домленн€
-                        CensorBadWordsInMessage(modifiedData);
+                        CensorBadWordsInMessage(modifiedData, localBdwordcount);
 
 
                         if (bdwordcount < 3) {
