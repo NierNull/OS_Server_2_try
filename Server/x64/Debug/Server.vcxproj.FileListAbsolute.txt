@@ -5,3 +5,7 @@ D:\2 kurs\3 sem\os\labs\os_team_9\OS_9_Server\Server\x64\Debug\Server.vcxproj.As
 D:\2 kurs\3 sem\os\labs\os_team_9\OS_9_Server\Server\x64\Debug\Server.vcxproj.ResolveComReference.cache
 D:\2 kurs\3 sem\os\labs\os_team_9\OS_9_Server\Server\x64\Debug\Server.ServerForm.resources
 D:\2 kurs\3 sem\os\labs\os_team_9\OS_9_Server\Server\x64\Debug\Server.vcxproj.GenerateResource.cache
+D:\2 kurs\os_server\OS_9_Server\Server\x64\Debug\Server.vcxproj.AssemblyReference.cache
+D:\2 kurs\os_server\OS_9_Server\Server\x64\Debug\Server.vcxproj.ResolveComReference.cache
+D:\2 kurs\os_server\OS_9_Server\Server\x64\Debug\Server.ServerForm.resources
+D:\2 kurs\os_server\OS_9_Server\Server\x64\Debug\Server.vcxproj.GenerateResource.cache

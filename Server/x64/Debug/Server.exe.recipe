@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\2 kurs\3 sem\os\labs\os_team_9\OS_9_Server\x64\Debug\Server.exe</FullPath>
+      <FullPath>D:\2 kurs\os_server\OS_9_Server\x64\Debug\Server.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

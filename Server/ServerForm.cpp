@@ -150,8 +150,8 @@ void Server::ServerForm::UpdateLabel(String^ ip) {
 Task^ Server::ServerForm::Main() {
     FindIP();
     if (ipAddress == nullptr) {
-        ipAddress = System::Net::IPAddress::Parse("172.20.10.1");
-        this->Invoke(gcnew Action<String^>(this, &Server::ServerForm::UpdateLabel), "172.20.10.1");
+        ipAddress = System::Net::IPAddress::Parse("192.168.203.231");
+        this->Invoke(gcnew Action<String^>(this, &Server::ServerForm::UpdateLabel), "192.168.203.231");
     }
 
     try {
@@ -178,16 +178,6 @@ Task^ Server::ServerForm::Main() {
     }
 
     return Task::CompletedTask;
-}
-
-String^ Server::ServerForm::CensorBadWords(String^ input, System::Collections::Generic::List<String^>^ badWords) {
-    String^ censoredMessage = input;
-    for each (String ^ word in badWords) {
-        String^ pattern = "\\b" + word + "\\b";
-        censoredMessage = System::Text::RegularExpressions::Regex::Replace(censoredMessage, pattern, "***", System::Text::RegularExpressions::RegexOptions::IgnoreCase);
-        bdwordcount++;
-    }
-    return censoredMessage;
 }
 
 void Server::ServerForm::UpdateDataGridView() {
@@ -260,6 +250,56 @@ bool Server::ServerForm::PromptUserForSignupConfirmation(String^ username) {
 }
 
 
+String^ Server::ServerForm::CensorBadWords(String^ input, System::Collections::Generic::List<String^>^ badWords) {
+    String^ censoredMessage = input;
+    for each (String ^ word in badWords) {
+        String^ pattern = "\\b" + word + "\\b";
+        censoredMessage = System::Text::RegularExpressions::Regex::Replace(censoredMessage, pattern, "***", System::Text::RegularExpressions::RegexOptions::IgnoreCase);
+        bdwordcount++;
+    }
+    return censoredMessage;
+}
+
+void Server::ServerForm::CensorBadWordsInMessage(String^% message) {
+    // Скидаємо лічильник перед обробкою
+    bdwordcount = 0;
+
+    // Викликаємо окремі функції для кожного слова
+    CensorFuck(message);
+    CensorShit(message);
+    CensorAss(message);
+}
+
+
+void Server::ServerForm::CensorFuck(String^% input) {
+    String^ pattern = "\\bfuck\\b";
+    int count = System::Text::RegularExpressions::Regex::Matches(input, pattern, System::Text::RegularExpressions::RegexOptions::IgnoreCase)->Count;
+
+    if (count > 0) {
+        input = System::Text::RegularExpressions::Regex::Replace(input, pattern, "***", System::Text::RegularExpressions::RegexOptions::IgnoreCase);
+        bdwordcount += count; // Збільшуємо лічильник
+    }
+}
+void Server::ServerForm::CensorShit(String^% input) {
+    String^ pattern = "\\bshit\\b";
+    int count = System::Text::RegularExpressions::Regex::Matches(input, pattern, System::Text::RegularExpressions::RegexOptions::IgnoreCase)->Count;
+
+    if (count > 0) {
+        input = System::Text::RegularExpressions::Regex::Replace(input, pattern, "***", System::Text::RegularExpressions::RegexOptions::IgnoreCase);
+        bdwordcount += count; // Збільшуємо лічильник
+    }
+}
+void Server::ServerForm::CensorAss(String^% input) {
+    String^ pattern = "\\bass\\b";
+    int count = System::Text::RegularExpressions::Regex::Matches(input, pattern, System::Text::RegularExpressions::RegexOptions::IgnoreCase)->Count;
+
+    if (count > 0) {
+        input = System::Text::RegularExpressions::Regex::Replace(input, pattern, "***", System::Text::RegularExpressions::RegexOptions::IgnoreCase);
+        bdwordcount += count; // Збільшуємо лічильник
+    }
+}
+
+
 void Server::ServerForm::ProcessClient(Object^ clientObj) {
     TcpClient^ client = dynamic_cast<TcpClient^>(clientObj);
     if (client == nullptr) return;
@@ -275,6 +315,7 @@ void Server::ServerForm::ProcessClient(Object^ clientObj) {
             Console::WriteLine("Received: {0}", data);
 
             if (!String::IsNullOrEmpty(data)) {
+                //------------------------------------------------------------------------------------------
                 if (data[0] == 'L') {
                     // Login logic
                     int ch = 0;
@@ -293,7 +334,7 @@ void Server::ServerForm::ProcessClient(Object^ clientObj) {
                                 }
                             }
                             if (logcheck == 0) {
-                                String^ saved = System::IO::File::ReadAllText("received_data.txt");
+                                String^ saved = System::IO::File::ReadAllText("users_data.txt");
                                 logined->Add(check[1]);
                                 logined->Add(check[2]);
                                 logined->Add(check[3]);
@@ -307,6 +348,7 @@ void Server::ServerForm::ProcessClient(Object^ clientObj) {
                                 stream->Write(response, 0, response->Length);
                             }
                             else {
+                                ch++;
                                 array<Byte>^ response = Encoding::UTF8->GetBytes("2 ");
                                 stream->Write(response, 0, response->Length);
                             }
@@ -318,6 +360,7 @@ void Server::ServerForm::ProcessClient(Object^ clientObj) {
                         stream->Write(response, 0, response->Length);
                     }
                 }
+                //------------------------------------------------------------------------------------------------------
                 else if (data[0] == 'S') {
                     // Signup logic
                     int ch = 0;
@@ -330,7 +373,7 @@ void Server::ServerForm::ProcessClient(Object^ clientObj) {
                     for (int i = 0; i < words->Length; i += 2) {
                         if (check[1] == words[i]) {
                             ch++;
-                            array<Byte>^ response = Encoding::UTF8->GetBytes("2 sign in error");
+                            array<Byte>^ response = Encoding::UTF8->GetBytes("Sign in error");
                             stream->Write(response, 0, response->Length);
                             break;
                         }
@@ -366,6 +409,7 @@ void Server::ServerForm::ProcessClient(Object^ clientObj) {
                         }
                     }
                 }
+                //----------------------------------------------------------------------------------------------------------------
                 else if (data[0] == 'T') {
                     // Message transfer logic
                     String^ filePath = "received_data.txt";
@@ -373,13 +417,8 @@ void Server::ServerForm::ProcessClient(Object^ clientObj) {
                     String^ modifiedData = data->Substring(2);
 
                     if (moderate) {
-                        // Before calling CensorBadWords
-                        System::Collections::Generic::List<String^>^ badWords = gcnew System::Collections::Generic::List<String^>();
-                        badWords->Add("fuck");
-                        badWords->Add("shit");
-                        badWords->Add("ass");
-
-                        modifiedData = CensorBadWords(modifiedData, badWords);
+                        // Цензуруємо повідомлення
+                        CensorBadWordsInMessage(modifiedData);
 
 
                         if (bdwordcount < 3) {
@@ -437,94 +476,3 @@ void Server::ServerForm::ProcessClient(Object^ clientObj) {
     }
 }
 
-
-
-// Функція для обробки кожного клієнта
-void HandleClient(SOCKET clientSocket) {
-    char buffer[1024];
-    int bytesRead;
-
-    while ((bytesRead = recv(clientSocket, buffer, sizeof(buffer), 0)) > 0) {
-        buffer[bytesRead] = '\0';  // Завершення рядка
-        std::string data(buffer);
-
-        // Обробка даних від клієнта
-        if (data[0] == 'L') {
-            // Логіка для логіну
-            std::cout << "Login request received: " << data << std::endl;
-        }
-        else if (data[0] == 'S') {
-            // Логіка для реєстрації
-            std::cout << "Signup request received: " << data << std::endl;
-        }
-        else if (data[0] == 'T') {
-            // Логіка для передачі повідомлень
-            std::cout << "Message received: " << data << std::endl;
-        }
-
-        // Відповідь клієнту
-        std::string response = "Server response: " + data;
-        send(clientSocket, response.c_str(), response.length(), 0);
-    }
-
-    // Закриття з'єднання з клієнтом
-    closesocket(clientSocket);
-}
-
-Task^ Server::ServerForm::HandleClientAsync(TcpClient^ client) {
-    WSADATA wsaData;
-    if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
-        std::cerr << "WSAStartup failed" << std::endl;
-        return Task::CompletedTask;
-    }
-
-    // Створення сокета
-    SOCKET serverSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-    if (serverSocket == INVALID_SOCKET) {
-        std::cerr << "Socket creation failed" << std::endl;
-        WSACleanup();
-        return Task::CompletedTask;
-    }
-
-    // Налаштування параметрів сервера
-    sockaddr_in serverAddress;
-    serverAddress.sin_family = AF_INET;
-    serverAddress.sin_port = htons(54000);  // Порт для сервера
-    serverAddress.sin_addr.s_addr = INADDR_ANY;
-
-    // Прив'язка сокета до адреси
-    if (bind(serverSocket, (sockaddr*)&serverAddress, sizeof(serverAddress)) == SOCKET_ERROR) {
-        std::cerr << "Bind failed" << std::endl;
-        closesocket(serverSocket);
-        WSACleanup();
-        return Task::CompletedTask;
-    }
-
-    // Слухання порту
-    if (listen(serverSocket, SOMAXCONN) == SOCKET_ERROR) {
-        std::cerr << "Listen failed" << std::endl;
-        closesocket(serverSocket);
-        WSACleanup();
-        return Task::CompletedTask;
-    }
-
-    std::cout << "Server is listening on port 54000..." << std::endl;
-
-    // Основний цикл обробки клієнтів
-    while (true) {
-        SOCKET clientSocket = accept(serverSocket, nullptr, nullptr);
-        if (clientSocket == INVALID_SOCKET) {
-            std::cerr << "Accept failed" << std::endl;
-            continue;
-        }
-
-        // Створюємо новий потік для обробки кожного клієнта
-        std::thread clientThread(HandleClient, clientSocket);
-        clientThread.detach();  // Запускаємо потік та від'єднуємо його
-    }
-
-    // Закриваємо серверний сокет
-    closesocket(serverSocket);
-    WSACleanup();
-    return Task::CompletedTask;
-}

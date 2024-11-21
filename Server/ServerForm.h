@@ -291,11 +291,22 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 	 // private: System::Void ServerForm_Load(System::Object^ sender, System::EventArgs^ e);
 	 public: void FindIP();
 		   Task^ Main();
-		   Task^ HandleClientAsync(TcpClient^ client);
+		  
 		 
 		   void  UpdateLabel(String^ ip);
+
 		   void ProcessClient(Object^ clientObj);
+
+
+
+
 		   String^ CensorBadWords(String^ input, System::Collections::Generic::List<String^>^ badWords);
+
+		   void CensorFuck(String^% input);
+		   void CensorShit(String^% input);
+		   void CensorAss(String^% input);
+		   void CensorBadWordsInMessage(String^% message);
+
 		   void UpdateDataGridView();
 		   bool PromptUserForSignupConfirmation(String^ username);
 
