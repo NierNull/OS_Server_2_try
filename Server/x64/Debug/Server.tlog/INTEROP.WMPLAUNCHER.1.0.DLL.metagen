@@ -1,0 +1,43 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly Interop.WMPLauncher.1.0, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class WMPLauncher.WMPPlayAsPlaylistLauncherClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    WMPLauncher.WMPPlayAsPlaylistLauncher
+Interface WMPLauncher.WMPPlayAsPlaylistLauncher: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+Class WMPLauncher.WMPPlayFolderAsPlaylistLauncherClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    WMPLauncher.WMPPlayFolderAsPlaylistLauncher
+Interface WMPLauncher.WMPPlayFolderAsPlaylistLauncher: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+Class WMPLauncher.WMPAddToPlaylistLauncherClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    WMPLauncher.WMPAddToPlaylistLauncher
+Interface WMPLauncher.WMPAddToPlaylistLauncher: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+Class WMPLauncher.WMPBurnAudioCDLauncherClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    WMPLauncher.WMPBurnAudioCDLauncher
+Interface WMPLauncher.WMPBurnAudioCDLauncher: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+Class WMPLauncher.WMPSkinMngrClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    WMPLauncher.IWMPSkinManager
+    WMPLauncher.WMPSkinMngr
+  Methods:
+    SetVisualStyle(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface WMPLauncher.WMPSkinMngr: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    WMPLauncher.IWMPSkinManager
+Interface WMPLauncher.IWMPSkinManager: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    SetVisualStyle(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract

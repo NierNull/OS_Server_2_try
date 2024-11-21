@@ -1,0 +1,23 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly Interop.WMPDXMLib.1.0, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Interface WMPDXMLib.IWMPDXM: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    System.Object wmpdxm 'get ' : 
+    System.Object OnUpdateUI 'set' : 
+    Double StartTime 'get ' : 
+  Methods:
+    get_wmpdxm(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_OnUpdateUI(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    NotifyVolumeChange(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    NotifyMuteChange(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_StartTime(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    getTimeString(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface WMPDXMLib.IWMPEmbed: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Boolean loop 'get set' : 
+  Methods:
+    get_loop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_loop(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName

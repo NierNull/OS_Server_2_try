@@ -1,0 +1,1337 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly Interop.MediaPlayer.1.0, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Interface MediaPlayer._MediaPlayerEvents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    DVDNotify(Int32(In), Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    EndOfStream(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    KeyDown(Int16(In), Int16(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    KeyUp(Int16(In), Int16(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    KeyPress(Int16(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MouseMove(Int16(In), Int16(In), Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MouseDown(Int16(In), Int16(In), Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MouseUp(Int16(In), Int16(In), Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Click(Int16(In), Int16(In), Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DblClick(Int16(In), Int16(In), Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OpenStateChange(Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PlayStateChange(Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ScriptCommand(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Buffering(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Error(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MarkerHit(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Warning(Int32(In), Int32(In), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    NewStream(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Disconnect(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ReadyStateChange(MPReadyStateConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Struct MediaPlayer.MPReadyStateConstants: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    MediaPlayer.MPReadyStateConstants mpReadyStateUninitialized = 0 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPReadyStateConstants mpReadyStateLoading = 1 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPReadyStateConstants mpReadyStateInteractive = 3 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPReadyStateConstants mpReadyStateComplete = 4 : Public, Static, Literal, HasDefault
+Class MediaPlayer.MediaPlayerClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    MediaPlayer.IMediaPlayer2
+    MediaPlayer.IMediaPlayer
+    MediaPlayer.MediaPlayer
+    MediaPlayer._MediaPlayerEvents_Event
+  Properties:
+    Double CurrentPosition 'get set' : 
+    Double Duration 'get ' : 
+    Int32 ImageSourceWidth 'get ' : 
+    Int32 ImageSourceHeight 'get ' : 
+    Int32 MarkerCount 'get ' : 
+    Boolean CanScan 'get ' : 
+    Boolean CanSeek 'get ' : 
+    Boolean CanSeekToMarkers 'get ' : 
+    Int32 CurrentMarker 'get set' : 
+    System.String FileName 'get set' : 
+    System.String SourceLink 'get ' : 
+    System.DateTime CreationDate 'get ' : 
+    System.String ErrorCorrection 'get ' : 
+    Int32 Bandwidth 'get ' : 
+    Int32 SourceProtocol 'get ' : 
+    Int32 ReceivedPackets 'get ' : 
+    Int32 RecoveredPackets 'get ' : 
+    Int32 LostPackets 'get ' : 
+    Int32 ReceptionQuality 'get ' : 
+    Int32 BufferingCount 'get ' : 
+    Boolean IsBroadcast 'get ' : 
+    Int32 BufferingProgress 'get ' : 
+    System.String ChannelName 'get ' : 
+    System.String ChannelDescription 'get ' : 
+    System.String ChannelURL 'get ' : 
+    System.String ContactAddress 'get ' : 
+    System.String ContactPhone 'get ' : 
+    System.String ContactEmail 'get ' : 
+    Double BufferingTime 'get set' : 
+    Boolean AutoStart 'get set' : 
+    Boolean AutoRewind 'get set' : 
+    Double Rate 'get set' : 
+    Boolean SendKeyboardEvents 'get set' : 
+    Boolean SendMouseClickEvents 'get set' : 
+    Boolean SendMouseMoveEvents 'get set' : 
+    Int32 PlayCount 'get set' : 
+    Boolean ClickToPlay 'get set' : 
+    Boolean AllowScan 'get set' : 
+    Boolean EnableContextMenu 'get set' : 
+    Int32 CursorType 'get set' : 
+    Int32 CodecCount 'get ' : 
+    Boolean AllowChangeDisplaySize 'get set' : 
+    Boolean IsDurationValid 'get ' : 
+    Int32 OpenState 'get ' : 
+    Boolean SendOpenStateChangeEvents 'get set' : 
+    Boolean SendWarningEvents 'get set' : 
+    Boolean SendErrorEvents 'get set' : 
+    MediaPlayer.MPPlayStateConstants PlayState 'get ' : 
+    Boolean SendPlayStateChangeEvents 'get set' : 
+    MediaPlayer.MPDisplaySizeConstants DisplaySize 'get set' : 
+    Boolean InvokeURLs 'get set' : 
+    System.String BaseURL 'get set' : 
+    System.String DefaultFrame 'get set' : 
+    Boolean HasError 'get ' : 
+    System.String ErrorDescription 'get ' : 
+    Int32 ErrorCode 'get ' : 
+    Boolean AnimationAtStart 'get set' : 
+    Boolean TransparentAtStart 'get set' : 
+    Int32 Volume 'get set' : 
+    Int32 Balance 'get set' : 
+    MediaPlayer.MPReadyStateConstants ReadyState 'get ' : 
+    Double SelectionStart 'get set' : 
+    Double SelectionEnd 'get set' : 
+    Boolean ShowDisplay 'get set' : 
+    Boolean ShowControls 'get set' : 
+    Boolean ShowPositionControls 'get set' : 
+    Boolean ShowTracker 'get set' : 
+    Boolean EnablePositionControls 'get set' : 
+    Boolean EnableTracker 'get set' : 
+    Boolean Enabled 'get set' : 
+    UInt32 DisplayForeColor 'get set' : 
+    UInt32 DisplayBackColor 'get set' : 
+    MediaPlayer.MPDisplayModeConstants DisplayMode 'get set' : 
+    Boolean VideoBorder3D 'get set' : 
+    Int32 VideoBorderWidth 'get set' : 
+    UInt32 VideoBorderColor 'get set' : 
+    Boolean ShowGotoBar 'get set' : 
+    Boolean ShowStatusBar 'get set' : 
+    Boolean ShowCaptioning 'get set' : 
+    Boolean ShowAudioControls 'get set' : 
+    System.String CaptioningID 'get set' : 
+    Boolean Mute 'get set' : 
+    Boolean CanPreview 'get ' : 
+    Boolean PreviewMode 'get set' : 
+    Boolean HasMultipleItems 'get ' : 
+    Int32 Language 'get set' : 
+    Int32 AudioStream 'get set' : 
+    System.String SAMIStyle 'get set' : 
+    System.String SAMILang 'get set' : 
+    System.String SAMIFileName 'get set' : 
+    Int32 StreamCount 'get ' : 
+    System.String ClientId 'get ' : 
+    Int32 ConnectionSpeed 'get ' : 
+    Boolean AutoSize 'get set' : 
+    Boolean EnableFullScreenControls 'get set' : 
+    System.Object ActiveMovie 'get ' : 
+    System.Object NSPlay 'get ' : 
+    Boolean WindowlessVideo 'get set' : 
+    MediaPlayer.IMediaPlayerDvd DVD 'get ' : 
+    Int32 EntryCount 'get ' : 
+  Events:
+    MediaPlayer._MediaPlayerEvents_DVDNotifyEventHandler DVDNotify: 
+    MediaPlayer._MediaPlayerEvents_EndOfStreamEventHandler EndOfStream: 
+    MediaPlayer._MediaPlayerEvents_KeyDownEventHandler KeyDown: 
+    MediaPlayer._MediaPlayerEvents_KeyUpEventHandler KeyUp: 
+    MediaPlayer._MediaPlayerEvents_KeyPressEventHandler KeyPress: 
+    MediaPlayer._MediaPlayerEvents_MouseMoveEventHandler MouseMove: 
+    MediaPlayer._MediaPlayerEvents_MouseDownEventHandler MouseDown: 
+    MediaPlayer._MediaPlayerEvents_MouseUpEventHandler MouseUp: 
+    MediaPlayer._MediaPlayerEvents_ClickEventHandler Click: 
+    MediaPlayer._MediaPlayerEvents_DblClickEventHandler DblClick: 
+    MediaPlayer._MediaPlayerEvents_OpenStateChangeEventHandler OpenStateChange: 
+    MediaPlayer._MediaPlayerEvents_PlayStateChangeEventHandler PlayStateChange: 
+    MediaPlayer._MediaPlayerEvents_ScriptCommandEventHandler ScriptCommand: 
+    MediaPlayer._MediaPlayerEvents_BufferingEventHandler Buffering: 
+    MediaPlayer._MediaPlayerEvents_ErrorEventHandler Error: 
+    MediaPlayer._MediaPlayerEvents_MarkerHitEventHandler MarkerHit: 
+    MediaPlayer._MediaPlayerEvents_WarningEventHandler Warning: 
+    MediaPlayer._MediaPlayerEvents_NewStreamEventHandler NewStream: 
+    MediaPlayer._MediaPlayerEvents_DisconnectEventHandler Disconnect: 
+    MediaPlayer._MediaPlayerEvents_ReadyStateChangeEventHandler ReadyStateChange: 
+  Methods:
+    add_KeyUp(_MediaPlayerEvents_KeyUpEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_KeyUp(_MediaPlayerEvents_KeyUpEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_KeyPress(_MediaPlayerEvents_KeyPressEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_KeyPress(_MediaPlayerEvents_KeyPressEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MouseMove(_MediaPlayerEvents_MouseMoveEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MouseMove(_MediaPlayerEvents_MouseMoveEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MouseDown(_MediaPlayerEvents_MouseDownEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MouseDown(_MediaPlayerEvents_MouseDownEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MouseUp(_MediaPlayerEvents_MouseUpEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MouseUp(_MediaPlayerEvents_MouseUpEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_Click(_MediaPlayerEvents_ClickEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_Click(_MediaPlayerEvents_ClickEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_DblClick(_MediaPlayerEvents_DblClickEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_DblClick(_MediaPlayerEvents_DblClickEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_OpenStateChange(_MediaPlayerEvents_OpenStateChangeEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_OpenStateChange(_MediaPlayerEvents_OpenStateChangeEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_PlayStateChange(_MediaPlayerEvents_PlayStateChangeEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_PlayStateChange(_MediaPlayerEvents_PlayStateChangeEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_ScriptCommand(_MediaPlayerEvents_ScriptCommandEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_ScriptCommand(_MediaPlayerEvents_ScriptCommandEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_Buffering(_MediaPlayerEvents_BufferingEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_Buffering(_MediaPlayerEvents_BufferingEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_Error(_MediaPlayerEvents_ErrorEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_Error(_MediaPlayerEvents_ErrorEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MarkerHit(_MediaPlayerEvents_MarkerHitEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MarkerHit(_MediaPlayerEvents_MarkerHitEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_Warning(_MediaPlayerEvents_WarningEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_Warning(_MediaPlayerEvents_WarningEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_NewStream(_MediaPlayerEvents_NewStreamEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_NewStream(_MediaPlayerEvents_NewStreamEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_Disconnect(_MediaPlayerEvents_DisconnectEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_Disconnect(_MediaPlayerEvents_DisconnectEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_ReadyStateChange(_MediaPlayerEvents_ReadyStateChangeEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_ReadyStateChange(_MediaPlayerEvents_ReadyStateChangeEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_CaptioningID(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_CaptioningID(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Mute(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Mute(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CanPreview(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_PreviewMode(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_PreviewMode(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_HasMultipleItems(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Language(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Language(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_AudioStream(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_AudioStream(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SAMIStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SAMIStyle(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SAMILang(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SAMILang(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SAMIFileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SAMIFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_StreamCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ClientId(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ConnectionSpeed(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_AutoSize(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_AutoSize(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_EnableFullScreenControls(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_EnableFullScreenControls(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ActiveMovie(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_NSPlay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_WindowlessVideo(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_WindowlessVideo(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Play(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Stop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Pause(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetMarkerTime(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetMarkerName(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AboutBox(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetCodecInstalled(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetCodecDescription(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetCodecURL(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetMoreInfoURL(MPMoreInfoType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetMediaInfoString(MPMediaInfoType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Cancel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Open(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsSoundCardEnabled(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Next(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Previous(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    StreamSelect(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    FastForward(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    FastReverse(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetStreamName(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetStreamGroup(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetStreamSelected(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_DVD(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetMediaParameter(Int32(In), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetMediaParameterName(Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_EntryCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetCurrentEntry(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetCurrentEntry(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ShowDialog(MPShowDialogConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_DVDNotify(_MediaPlayerEvents_DVDNotifyEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_DVDNotify(_MediaPlayerEvents_DVDNotifyEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_EndOfStream(_MediaPlayerEvents_EndOfStreamEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_EndOfStream(_MediaPlayerEvents_EndOfStreamEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_KeyDown(_MediaPlayerEvents_KeyDownEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_KeyDown(_MediaPlayerEvents_KeyDownEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    set_SendWarningEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SendErrorEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SendErrorEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_PlayState(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SendPlayStateChangeEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SendPlayStateChangeEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_DisplaySize(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_DisplaySize(MPDisplaySizeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_InvokeURLs(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_InvokeURLs(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BaseURL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BaseURL(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_DefaultFrame(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_DefaultFrame(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_HasError(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ErrorDescription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ErrorCode(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_AnimationAtStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_AnimationAtStart(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_TransparentAtStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_TransparentAtStart(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Volume(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Volume(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Balance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Balance(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ReadyState(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SelectionStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SelectionStart(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SelectionEnd(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SelectionEnd(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowDisplay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowDisplay(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowControls(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowControls(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowPositionControls(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowPositionControls(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowTracker(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowTracker(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_EnablePositionControls(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_EnablePositionControls(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_EnableTracker(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_EnableTracker(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Enabled(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Enabled(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_DisplayForeColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_DisplayForeColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_DisplayBackColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_DisplayBackColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_DisplayMode(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_DisplayMode(MPDisplayModeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_VideoBorder3D(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_VideoBorder3D(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_VideoBorderWidth(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_VideoBorderWidth(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_VideoBorderColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_VideoBorderColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowGotoBar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowGotoBar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowStatusBar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowStatusBar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowCaptioning(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowCaptioning(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowAudioControls(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowAudioControls(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CurrentPosition(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_CurrentPosition(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Duration(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ImageSourceWidth(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ImageSourceHeight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_MarkerCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CanScan(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CanSeek(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CanSeekToMarkers(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CurrentMarker(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_CurrentMarker(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_FileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_FileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SourceLink(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CreationDate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ErrorCorrection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Bandwidth(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SourceProtocol(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ReceivedPackets(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_RecoveredPackets(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_LostPackets(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ReceptionQuality(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BufferingCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_IsBroadcast(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BufferingProgress(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ChannelName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ChannelDescription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ChannelURL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ContactAddress(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ContactPhone(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ContactEmail(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BufferingTime(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BufferingTime(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_AutoStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_AutoStart(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_AutoRewind(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_AutoRewind(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Rate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Rate(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SendKeyboardEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SendKeyboardEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SendMouseClickEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SendMouseClickEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SendMouseMoveEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SendMouseMoveEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_PlayCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_PlayCount(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ClickToPlay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ClickToPlay(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_AllowScan(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_AllowScan(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_EnableContextMenu(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_EnableContextMenu(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CursorType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_CursorType(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CodecCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_AllowChangeDisplaySize(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_AllowChangeDisplaySize(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_IsDurationValid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_OpenState(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SendOpenStateChangeEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SendOpenStateChangeEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SendWarningEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface MediaPlayer._MediaPlayerEvents_Event: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Events:
+    MediaPlayer._MediaPlayerEvents_DVDNotifyEventHandler DVDNotify: 
+    MediaPlayer._MediaPlayerEvents_EndOfStreamEventHandler EndOfStream: 
+    MediaPlayer._MediaPlayerEvents_KeyDownEventHandler KeyDown: 
+    MediaPlayer._MediaPlayerEvents_KeyUpEventHandler KeyUp: 
+    MediaPlayer._MediaPlayerEvents_KeyPressEventHandler KeyPress: 
+    MediaPlayer._MediaPlayerEvents_MouseMoveEventHandler MouseMove: 
+    MediaPlayer._MediaPlayerEvents_MouseDownEventHandler MouseDown: 
+    MediaPlayer._MediaPlayerEvents_MouseUpEventHandler MouseUp: 
+    MediaPlayer._MediaPlayerEvents_ClickEventHandler Click: 
+    MediaPlayer._MediaPlayerEvents_DblClickEventHandler DblClick: 
+    MediaPlayer._MediaPlayerEvents_OpenStateChangeEventHandler OpenStateChange: 
+    MediaPlayer._MediaPlayerEvents_PlayStateChangeEventHandler PlayStateChange: 
+    MediaPlayer._MediaPlayerEvents_ScriptCommandEventHandler ScriptCommand: 
+    MediaPlayer._MediaPlayerEvents_BufferingEventHandler Buffering: 
+    MediaPlayer._MediaPlayerEvents_ErrorEventHandler Error: 
+    MediaPlayer._MediaPlayerEvents_MarkerHitEventHandler MarkerHit: 
+    MediaPlayer._MediaPlayerEvents_WarningEventHandler Warning: 
+    MediaPlayer._MediaPlayerEvents_NewStreamEventHandler NewStream: 
+    MediaPlayer._MediaPlayerEvents_DisconnectEventHandler Disconnect: 
+    MediaPlayer._MediaPlayerEvents_ReadyStateChangeEventHandler ReadyStateChange: 
+  Methods:
+    add_DVDNotify(_MediaPlayerEvents_DVDNotifyEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_DVDNotify(_MediaPlayerEvents_DVDNotifyEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_EndOfStream(_MediaPlayerEvents_EndOfStreamEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_EndOfStream(_MediaPlayerEvents_EndOfStreamEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_KeyDown(_MediaPlayerEvents_KeyDownEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_KeyDown(_MediaPlayerEvents_KeyDownEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_KeyUp(_MediaPlayerEvents_KeyUpEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_KeyUp(_MediaPlayerEvents_KeyUpEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_KeyPress(_MediaPlayerEvents_KeyPressEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_KeyPress(_MediaPlayerEvents_KeyPressEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MouseMove(_MediaPlayerEvents_MouseMoveEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MouseMove(_MediaPlayerEvents_MouseMoveEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MouseDown(_MediaPlayerEvents_MouseDownEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MouseDown(_MediaPlayerEvents_MouseDownEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MouseUp(_MediaPlayerEvents_MouseUpEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MouseUp(_MediaPlayerEvents_MouseUpEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_Click(_MediaPlayerEvents_ClickEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_Click(_MediaPlayerEvents_ClickEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_DblClick(_MediaPlayerEvents_DblClickEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_DblClick(_MediaPlayerEvents_DblClickEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_OpenStateChange(_MediaPlayerEvents_OpenStateChangeEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_OpenStateChange(_MediaPlayerEvents_OpenStateChangeEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_PlayStateChange(_MediaPlayerEvents_PlayStateChangeEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_PlayStateChange(_MediaPlayerEvents_PlayStateChangeEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_ScriptCommand(_MediaPlayerEvents_ScriptCommandEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_ScriptCommand(_MediaPlayerEvents_ScriptCommandEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_Buffering(_MediaPlayerEvents_BufferingEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_Buffering(_MediaPlayerEvents_BufferingEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_Error(_MediaPlayerEvents_ErrorEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_Error(_MediaPlayerEvents_ErrorEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MarkerHit(_MediaPlayerEvents_MarkerHitEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MarkerHit(_MediaPlayerEvents_MarkerHitEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_Warning(_MediaPlayerEvents_WarningEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_Warning(_MediaPlayerEvents_WarningEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_NewStream(_MediaPlayerEvents_NewStreamEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_NewStream(_MediaPlayerEvents_NewStreamEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_Disconnect(_MediaPlayerEvents_DisconnectEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_Disconnect(_MediaPlayerEvents_DisconnectEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_ReadyStateChange(_MediaPlayerEvents_ReadyStateChangeEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_ReadyStateChange(_MediaPlayerEvents_ReadyStateChangeEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class MediaPlayer._MediaPlayerEvents_DVDNotifyEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32(In), Int32(In), Int32(In)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_EndOfStreamEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32(In)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_KeyDownEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int16(In), Int16(In)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_KeyUpEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int16(In), Int16(In)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_KeyPressEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int16(In)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_MouseMoveEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int16(In), Int16(In), Int32(In), Int32(In)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_MouseDownEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int16(In), Int16(In), Int32(In), Int32(In)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_MouseUpEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int16(In), Int16(In), Int32(In), Int32(In)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_ClickEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int16(In), Int16(In), Int32(In), Int32(In)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_DblClickEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int16(In), Int16(In), Int32(In), Int32(In)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_OpenStateChangeEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32(In), Int32(In)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_PlayStateChangeEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32(In), Int32(In)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_ScriptCommandEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_BufferingEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Boolean(In)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_ErrorEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_MarkerHitEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32(In)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_WarningEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32(In), Int32(In), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_NewStreamEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_DisconnectEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32(In)): PrivateScope, Public, Virtual
+Class MediaPlayer._MediaPlayerEvents_ReadyStateChangeEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(MPReadyStateConstants(In)): PrivateScope, Public, Virtual
+Interface MediaPlayer.MediaPlayer: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    MediaPlayer.IMediaPlayer2
+    MediaPlayer.IMediaPlayer
+    MediaPlayer._MediaPlayerEvents_Event
+Interface MediaPlayer.IMediaPlayer2: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    MediaPlayer.IMediaPlayer
+  Properties:
+    Double CurrentPosition 'get set' : 
+    Double Duration 'get ' : 
+    Int32 ImageSourceWidth 'get ' : 
+    Int32 ImageSourceHeight 'get ' : 
+    Int32 MarkerCount 'get ' : 
+    Boolean CanScan 'get ' : 
+    Boolean CanSeek 'get ' : 
+    Boolean CanSeekToMarkers 'get ' : 
+    Int32 CurrentMarker 'get set' : 
+    System.String FileName 'get set' : 
+    System.String SourceLink 'get ' : 
+    System.DateTime CreationDate 'get ' : 
+    System.String ErrorCorrection 'get ' : 
+    Int32 Bandwidth 'get ' : 
+    Int32 SourceProtocol 'get ' : 
+    Int32 ReceivedPackets 'get ' : 
+    Int32 RecoveredPackets 'get ' : 
+    Int32 LostPackets 'get ' : 
+    Int32 ReceptionQuality 'get ' : 
+    Int32 BufferingCount 'get ' : 
+    Boolean IsBroadcast 'get ' : 
+    Int32 BufferingProgress 'get ' : 
+    System.String ChannelName 'get ' : 
+    System.String ChannelDescription 'get ' : 
+    System.String ChannelURL 'get ' : 
+    System.String ContactAddress 'get ' : 
+    System.String ContactPhone 'get ' : 
+    System.String ContactEmail 'get ' : 
+    Double BufferingTime 'get set' : 
+    Boolean AutoStart 'get set' : 
+    Boolean AutoRewind 'get set' : 
+    Double Rate 'get set' : 
+    Boolean SendKeyboardEvents 'get set' : 
+    Boolean SendMouseClickEvents 'get set' : 
+    Boolean SendMouseMoveEvents 'get set' : 
+    Int32 PlayCount 'get set' : 
+    Boolean ClickToPlay 'get set' : 
+    Boolean AllowScan 'get set' : 
+    Boolean EnableContextMenu 'get set' : 
+    Int32 CursorType 'get set' : 
+    Int32 CodecCount 'get ' : 
+    Boolean AllowChangeDisplaySize 'get set' : 
+    Boolean IsDurationValid 'get ' : 
+    Int32 OpenState 'get ' : 
+    Boolean SendOpenStateChangeEvents 'get set' : 
+    Boolean SendWarningEvents 'get set' : 
+    Boolean SendErrorEvents 'get set' : 
+    MediaPlayer.MPPlayStateConstants PlayState 'get ' : 
+    Boolean SendPlayStateChangeEvents 'get set' : 
+    MediaPlayer.MPDisplaySizeConstants DisplaySize 'get set' : 
+    Boolean InvokeURLs 'get set' : 
+    System.String BaseURL 'get set' : 
+    System.String DefaultFrame 'get set' : 
+    Boolean HasError 'get ' : 
+    System.String ErrorDescription 'get ' : 
+    Int32 ErrorCode 'get ' : 
+    Boolean AnimationAtStart 'get set' : 
+    Boolean TransparentAtStart 'get set' : 
+    Int32 Volume 'get set' : 
+    Int32 Balance 'get set' : 
+    MediaPlayer.MPReadyStateConstants ReadyState 'get ' : 
+    Double SelectionStart 'get set' : 
+    Double SelectionEnd 'get set' : 
+    Boolean ShowDisplay 'get set' : 
+    Boolean ShowControls 'get set' : 
+    Boolean ShowPositionControls 'get set' : 
+    Boolean ShowTracker 'get set' : 
+    Boolean EnablePositionControls 'get set' : 
+    Boolean EnableTracker 'get set' : 
+    Boolean Enabled 'get set' : 
+    UInt32 DisplayForeColor 'get set' : 
+    UInt32 DisplayBackColor 'get set' : 
+    MediaPlayer.MPDisplayModeConstants DisplayMode 'get set' : 
+    Boolean VideoBorder3D 'get set' : 
+    Int32 VideoBorderWidth 'get set' : 
+    UInt32 VideoBorderColor 'get set' : 
+    Boolean ShowGotoBar 'get set' : 
+    Boolean ShowStatusBar 'get set' : 
+    Boolean ShowCaptioning 'get set' : 
+    Boolean ShowAudioControls 'get set' : 
+    System.String CaptioningID 'get set' : 
+    Boolean Mute 'get set' : 
+    Boolean CanPreview 'get ' : 
+    Boolean PreviewMode 'get set' : 
+    Boolean HasMultipleItems 'get ' : 
+    Int32 Language 'get set' : 
+    Int32 AudioStream 'get set' : 
+    System.String SAMIStyle 'get set' : 
+    System.String SAMILang 'get set' : 
+    System.String SAMIFileName 'get set' : 
+    Int32 StreamCount 'get ' : 
+    System.String ClientId 'get ' : 
+    Int32 ConnectionSpeed 'get ' : 
+    Boolean AutoSize 'get set' : 
+    Boolean EnableFullScreenControls 'get set' : 
+    System.Object ActiveMovie 'get ' : 
+    System.Object NSPlay 'get ' : 
+    Boolean WindowlessVideo 'get set' : 
+    MediaPlayer.IMediaPlayerDvd DVD 'get ' : 
+    Int32 EntryCount 'get ' : 
+  Methods:
+    set_CaptioningID(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Mute(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Mute(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CanPreview(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_PreviewMode(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_PreviewMode(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_HasMultipleItems(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Language(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Language(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AudioStream(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AudioStream(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SAMIStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SAMIStyle(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SAMILang(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SAMILang(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SAMIFileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SAMIFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_StreamCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ClientId(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ConnectionSpeed(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AutoSize(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AutoSize(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EnableFullScreenControls(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EnableFullScreenControls(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ActiveMovie(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_NSPlay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_WindowlessVideo(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_WindowlessVideo(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Play(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Stop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Pause(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetMarkerTime(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetMarkerName(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AboutBox(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCodecInstalled(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCodecDescription(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCodecURL(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetMoreInfoURL(MPMoreInfoType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetMediaInfoString(MPMediaInfoType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Cancel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Open(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsSoundCardEnabled(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Next(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Previous(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    StreamSelect(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    FastForward(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    FastReverse(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetStreamName(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetStreamGroup(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetStreamSelected(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_DVD(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetMediaParameter(Int32(In), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetMediaParameterName(Int32(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_EntryCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetCurrentEntry(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetCurrentEntry(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ShowDialog(MPShowDialogConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_CurrentPosition(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_CurrentPosition(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Duration(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ImageSourceWidth(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ImageSourceHeight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MarkerCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CanScan(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CanSeek(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CanSeekToMarkers(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CurrentMarker(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_CurrentMarker(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_FileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_FileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SourceLink(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CreationDate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ErrorCorrection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Bandwidth(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SourceProtocol(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReceivedPackets(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_RecoveredPackets(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LostPackets(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReceptionQuality(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BufferingCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_IsBroadcast(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BufferingProgress(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ChannelName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ChannelDescription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ChannelURL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ContactAddress(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ContactPhone(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ContactEmail(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BufferingTime(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BufferingTime(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AutoStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AutoStart(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AutoRewind(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AutoRewind(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Rate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Rate(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SendKeyboardEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SendKeyboardEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SendMouseClickEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SendMouseClickEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SendMouseMoveEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SendMouseMoveEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_PlayCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_PlayCount(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ClickToPlay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ClickToPlay(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AllowScan(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AllowScan(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EnableContextMenu(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EnableContextMenu(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CursorType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_CursorType(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CodecCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AllowChangeDisplaySize(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AllowChangeDisplaySize(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_IsDurationValid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_OpenState(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SendOpenStateChangeEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SendOpenStateChangeEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SendWarningEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SendWarningEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SendErrorEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SendErrorEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_PlayState(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SendPlayStateChangeEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SendPlayStateChangeEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplaySize(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplaySize(MPDisplaySizeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_InvokeURLs(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_InvokeURLs(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BaseURL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BaseURL(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DefaultFrame(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DefaultFrame(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_HasError(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ErrorDescription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ErrorCode(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AnimationAtStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AnimationAtStart(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_TransparentAtStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_TransparentAtStart(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Volume(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Volume(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Balance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Balance(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReadyState(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SelectionStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SelectionStart(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SelectionEnd(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SelectionEnd(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowDisplay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowDisplay(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowControls(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowControls(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowPositionControls(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowPositionControls(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowTracker(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowTracker(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EnablePositionControls(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EnablePositionControls(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EnableTracker(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EnableTracker(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Enabled(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Enabled(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplayForeColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplayForeColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplayBackColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplayBackColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplayMode(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplayMode(MPDisplayModeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VideoBorder3D(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_VideoBorder3D(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VideoBorderWidth(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_VideoBorderWidth(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VideoBorderColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_VideoBorderColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowGotoBar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowGotoBar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowStatusBar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowStatusBar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowCaptioning(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowCaptioning(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowAudioControls(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowAudioControls(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CaptioningID(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface MediaPlayer.IMediaPlayer: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Double CurrentPosition 'get set' : 
+    Double Duration 'get ' : 
+    Int32 ImageSourceWidth 'get ' : 
+    Int32 ImageSourceHeight 'get ' : 
+    Int32 MarkerCount 'get ' : 
+    Boolean CanScan 'get ' : 
+    Boolean CanSeek 'get ' : 
+    Boolean CanSeekToMarkers 'get ' : 
+    Int32 CurrentMarker 'get set' : 
+    System.String FileName 'get set' : 
+    System.String SourceLink 'get ' : 
+    System.DateTime CreationDate 'get ' : 
+    System.String ErrorCorrection 'get ' : 
+    Int32 Bandwidth 'get ' : 
+    Int32 SourceProtocol 'get ' : 
+    Int32 ReceivedPackets 'get ' : 
+    Int32 RecoveredPackets 'get ' : 
+    Int32 LostPackets 'get ' : 
+    Int32 ReceptionQuality 'get ' : 
+    Int32 BufferingCount 'get ' : 
+    Boolean IsBroadcast 'get ' : 
+    Int32 BufferingProgress 'get ' : 
+    System.String ChannelName 'get ' : 
+    System.String ChannelDescription 'get ' : 
+    System.String ChannelURL 'get ' : 
+    System.String ContactAddress 'get ' : 
+    System.String ContactPhone 'get ' : 
+    System.String ContactEmail 'get ' : 
+    Double BufferingTime 'get set' : 
+    Boolean AutoStart 'get set' : 
+    Boolean AutoRewind 'get set' : 
+    Double Rate 'get set' : 
+    Boolean SendKeyboardEvents 'get set' : 
+    Boolean SendMouseClickEvents 'get set' : 
+    Boolean SendMouseMoveEvents 'get set' : 
+    Int32 PlayCount 'get set' : 
+    Boolean ClickToPlay 'get set' : 
+    Boolean AllowScan 'get set' : 
+    Boolean EnableContextMenu 'get set' : 
+    Int32 CursorType 'get set' : 
+    Int32 CodecCount 'get ' : 
+    Boolean AllowChangeDisplaySize 'get set' : 
+    Boolean IsDurationValid 'get ' : 
+    Int32 OpenState 'get ' : 
+    Boolean SendOpenStateChangeEvents 'get set' : 
+    Boolean SendWarningEvents 'get set' : 
+    Boolean SendErrorEvents 'get set' : 
+    MediaPlayer.MPPlayStateConstants PlayState 'get ' : 
+    Boolean SendPlayStateChangeEvents 'get set' : 
+    MediaPlayer.MPDisplaySizeConstants DisplaySize 'get set' : 
+    Boolean InvokeURLs 'get set' : 
+    System.String BaseURL 'get set' : 
+    System.String DefaultFrame 'get set' : 
+    Boolean HasError 'get ' : 
+    System.String ErrorDescription 'get ' : 
+    Int32 ErrorCode 'get ' : 
+    Boolean AnimationAtStart 'get set' : 
+    Boolean TransparentAtStart 'get set' : 
+    Int32 Volume 'get set' : 
+    Int32 Balance 'get set' : 
+    MediaPlayer.MPReadyStateConstants ReadyState 'get ' : 
+    Double SelectionStart 'get set' : 
+    Double SelectionEnd 'get set' : 
+    Boolean ShowDisplay 'get set' : 
+    Boolean ShowControls 'get set' : 
+    Boolean ShowPositionControls 'get set' : 
+    Boolean ShowTracker 'get set' : 
+    Boolean EnablePositionControls 'get set' : 
+    Boolean EnableTracker 'get set' : 
+    Boolean Enabled 'get set' : 
+    UInt32 DisplayForeColor 'get set' : 
+    UInt32 DisplayBackColor 'get set' : 
+    MediaPlayer.MPDisplayModeConstants DisplayMode 'get set' : 
+    Boolean VideoBorder3D 'get set' : 
+    Int32 VideoBorderWidth 'get set' : 
+    UInt32 VideoBorderColor 'get set' : 
+    Boolean ShowGotoBar 'get set' : 
+    Boolean ShowStatusBar 'get set' : 
+    Boolean ShowCaptioning 'get set' : 
+    Boolean ShowAudioControls 'get set' : 
+    System.String CaptioningID 'get set' : 
+    Boolean Mute 'get set' : 
+    Boolean CanPreview 'get ' : 
+    Boolean PreviewMode 'get set' : 
+    Boolean HasMultipleItems 'get ' : 
+    Int32 Language 'get set' : 
+    Int32 AudioStream 'get set' : 
+    System.String SAMIStyle 'get set' : 
+    System.String SAMILang 'get set' : 
+    System.String SAMIFileName 'get set' : 
+    Int32 StreamCount 'get ' : 
+    System.String ClientId 'get ' : 
+    Int32 ConnectionSpeed 'get ' : 
+    Boolean AutoSize 'get set' : 
+    Boolean EnableFullScreenControls 'get set' : 
+    System.Object ActiveMovie 'get ' : 
+    System.Object NSPlay 'get ' : 
+    Boolean WindowlessVideo 'get set' : 
+  Methods:
+    set_CaptioningID(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Mute(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Mute(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CanPreview(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_PreviewMode(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_PreviewMode(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_HasMultipleItems(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Language(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Language(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AudioStream(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AudioStream(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SAMIStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SAMIStyle(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SAMILang(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SAMILang(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SAMIFileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SAMIFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_StreamCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ClientId(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ConnectionSpeed(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AutoSize(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AutoSize(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EnableFullScreenControls(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EnableFullScreenControls(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ActiveMovie(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_NSPlay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_WindowlessVideo(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_WindowlessVideo(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Play(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Stop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Pause(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetMarkerTime(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetMarkerName(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AboutBox(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCodecInstalled(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCodecDescription(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCodecURL(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetMoreInfoURL(MPMoreInfoType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetMediaInfoString(MPMediaInfoType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Cancel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Open(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsSoundCardEnabled(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Next(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Previous(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    StreamSelect(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    FastForward(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    FastReverse(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetStreamName(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetStreamGroup(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetStreamSelected(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_CurrentPosition(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_CurrentPosition(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Duration(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ImageSourceWidth(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ImageSourceHeight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MarkerCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CanScan(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CanSeek(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CanSeekToMarkers(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CurrentMarker(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_CurrentMarker(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_FileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_FileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SourceLink(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CreationDate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ErrorCorrection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Bandwidth(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SourceProtocol(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReceivedPackets(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_RecoveredPackets(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LostPackets(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReceptionQuality(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BufferingCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_IsBroadcast(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BufferingProgress(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ChannelName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ChannelDescription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ChannelURL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ContactAddress(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ContactPhone(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ContactEmail(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BufferingTime(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BufferingTime(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AutoStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AutoStart(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AutoRewind(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AutoRewind(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Rate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Rate(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SendKeyboardEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SendKeyboardEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SendMouseClickEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SendMouseClickEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SendMouseMoveEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SendMouseMoveEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_PlayCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_PlayCount(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ClickToPlay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ClickToPlay(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AllowScan(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AllowScan(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EnableContextMenu(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EnableContextMenu(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CursorType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_CursorType(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CodecCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AllowChangeDisplaySize(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AllowChangeDisplaySize(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_IsDurationValid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_OpenState(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SendOpenStateChangeEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SendOpenStateChangeEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SendWarningEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SendWarningEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SendErrorEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SendErrorEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_PlayState(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SendPlayStateChangeEvents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SendPlayStateChangeEvents(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplaySize(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplaySize(MPDisplaySizeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_InvokeURLs(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_InvokeURLs(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BaseURL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BaseURL(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DefaultFrame(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DefaultFrame(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_HasError(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ErrorDescription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ErrorCode(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AnimationAtStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AnimationAtStart(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_TransparentAtStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_TransparentAtStart(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Volume(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Volume(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Balance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Balance(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReadyState(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SelectionStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SelectionStart(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SelectionEnd(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SelectionEnd(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowDisplay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowDisplay(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowControls(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowControls(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowPositionControls(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowPositionControls(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowTracker(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowTracker(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EnablePositionControls(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EnablePositionControls(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EnableTracker(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EnableTracker(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Enabled(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Enabled(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplayForeColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplayForeColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplayBackColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplayBackColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplayMode(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplayMode(MPDisplayModeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VideoBorder3D(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_VideoBorder3D(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VideoBorderWidth(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_VideoBorderWidth(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VideoBorderColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_VideoBorderColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowGotoBar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowGotoBar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowStatusBar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowStatusBar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowCaptioning(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowCaptioning(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowAudioControls(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowAudioControls(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CaptioningID(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Struct MediaPlayer.MPPlayStateConstants: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    MediaPlayer.MPPlayStateConstants mpStopped = 0 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPPlayStateConstants mpPaused = 1 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPPlayStateConstants mpPlaying = 2 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPPlayStateConstants mpWaiting = 3 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPPlayStateConstants mpScanForward = 4 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPPlayStateConstants mpScanReverse = 5 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPPlayStateConstants mpClosed = 6 : Public, Static, Literal, HasDefault
+Struct MediaPlayer.MPDisplaySizeConstants: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    MediaPlayer.MPDisplaySizeConstants mpDefaultSize = 0 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPDisplaySizeConstants mpHalfSize = 1 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPDisplaySizeConstants mpDoubleSize = 2 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPDisplaySizeConstants mpFullScreen = 3 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPDisplaySizeConstants mpFitToSize = 4 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPDisplaySizeConstants mpOneSixteenthScreen = 5 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPDisplaySizeConstants mpOneFourthScreen = 6 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPDisplaySizeConstants mpOneHalfScreen = 7 : Public, Static, Literal, HasDefault
+Struct MediaPlayer.MPDisplayModeConstants: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    MediaPlayer.MPDisplayModeConstants mpTime = 0 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPDisplayModeConstants mpFrames = 1 : Public, Static, Literal, HasDefault
+Struct MediaPlayer.MPMoreInfoType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    MediaPlayer.MPMoreInfoType mpShowURL = 0 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMoreInfoType mpClipURL = 1 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMoreInfoType mpBannerURL = 2 : Public, Static, Literal, HasDefault
+Struct MediaPlayer.MPMediaInfoType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    MediaPlayer.MPMediaInfoType mpShowFilename = 0 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMediaInfoType mpShowTitle = 1 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMediaInfoType mpShowAuthor = 2 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMediaInfoType mpShowCopyright = 3 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMediaInfoType mpShowRating = 4 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMediaInfoType mpShowDescription = 5 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMediaInfoType mpShowLogoIcon = 6 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMediaInfoType mpClipFilename = 7 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMediaInfoType mpClipTitle = 8 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMediaInfoType mpClipAuthor = 9 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMediaInfoType mpClipCopyright = 10 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMediaInfoType mpClipRating = 11 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMediaInfoType mpClipDescription = 12 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMediaInfoType mpClipLogoIcon = 13 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMediaInfoType mpBannerImage = 14 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMediaInfoType mpBannerMoreInfo = 15 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPMediaInfoType mpWatermark = 16 : Public, Static, Literal, HasDefault
+Interface MediaPlayer.IMediaPlayerDvd: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    System.String TotalTitleTime 'get ' : 
+    UInt32 ButtonsAvailable 'get ' : 
+    UInt32 CurrentButton 'get ' : 
+    UInt32 AudioStreamsAvailable 'get ' : 
+    UInt32 CurrentAudioStream 'get set' : 
+    UInt32 CurrentSubpictureStream 'get set' : 
+    UInt32 SubpictureStreamsAvailable 'get ' : 
+    Boolean SubpictureOn 'get set' : 
+    UInt32 AnglesAvailable 'get ' : 
+    UInt32 CurrentAngle 'get set' : 
+    UInt32 CurrentTitle 'get ' : 
+    UInt32 CurrentChapter 'get ' : 
+    System.String CurrentTime 'get ' : 
+    System.String Root 'get set' : 
+    UInt32 FramesPerSecond 'get ' : 
+    UInt32 CurrentDomain 'get ' : 
+    UInt32 TitlesAvailable 'get ' : 
+    UInt32 VolumesAvailable 'get ' : 
+    UInt32 CurrentVolume 'get ' : 
+    UInt32 CurrentDiscSide 'get ' : 
+    Boolean CCActive 'get set' : 
+    UInt32 CurrentCCService 'get set' : 
+    System.String UniqueID 'get ' : 
+    UInt32 ColorKey 'get set' : 
+  Methods:
+    ButtonSelectAndActivate(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpperButtonSelect(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LowerButtonSelect(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LeftButtonSelect(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    RightButtonSelect(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ButtonActivate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ForwardScan(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BackwardScan(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PrevPGSearch(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    TopPGSearch(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    NextPGSearch(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    TitlePlay(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ChapterPlay(UInt32(In), UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ChapterSearch(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MenuCall(DVDMenuIDConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ResumeFromMenu(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    TimePlay(UInt32(In), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    TimeSearch(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ChapterPlayAutoStop(UInt32(In), UInt32(In), UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    StillOff(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GoUp(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_TotalTitleTime(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetNumberOfChapters(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetAudioLanguage(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetSubpictureLanguage(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetAllGPRMs(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetAllSPRMs(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UOPValid(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_ButtonsAvailable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CurrentButton(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AudioStreamsAvailable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CurrentAudioStream(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_CurrentAudioStream(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CurrentSubpictureStream(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_CurrentSubpictureStream(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SubpictureStreamsAvailable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SubpictureOn(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SubpictureOn(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AnglesAvailable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CurrentAngle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_CurrentAngle(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CurrentTitle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CurrentChapter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CurrentTime(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Root(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Root(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_FramesPerSecond(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CurrentDomain(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_TitlesAvailable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VolumesAvailable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CurrentVolume(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CurrentDiscSide(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CCActive(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_CCActive(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CurrentCCService(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_CurrentCCService(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_UniqueID(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ColorKey(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ColorKey(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Struct MediaPlayer.DVDMenuIDConstants: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    MediaPlayer.DVDMenuIDConstants dvdMenu_Title = 2 : Public, Static, Literal, HasDefault
+    MediaPlayer.DVDMenuIDConstants dvdMenu_Root = 3 : Public, Static, Literal, HasDefault
+    MediaPlayer.DVDMenuIDConstants dvdMenu_Subpicture = 4 : Public, Static, Literal, HasDefault
+    MediaPlayer.DVDMenuIDConstants dvdMenu_Audio = 5 : Public, Static, Literal, HasDefault
+    MediaPlayer.DVDMenuIDConstants dvdMenu_Angle = 6 : Public, Static, Literal, HasDefault
+    MediaPlayer.DVDMenuIDConstants dvdMenu_Chapter = 7 : Public, Static, Literal, HasDefault
+Struct MediaPlayer.MPShowDialogConstants: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    MediaPlayer.MPShowDialogConstants mpShowDialogHelp = 0 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPShowDialogConstants mpShowDialogStatistics = 1 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPShowDialogConstants mpShowDialogOptions = 2 : Public, Static, Literal, HasDefault
+    MediaPlayer.MPShowDialogConstants mpShowDialogContextMenu = 3 : Public, Static, Literal, HasDefault
+Class MediaPlayer._MediaPlayerEvents_SinkHelper: AutoLayout, AnsiClass, Class, Public, Sealed
+  Interfaces:
+    MediaPlayer._MediaPlayerEvents
+  Fields:
+    MediaPlayer._MediaPlayerEvents_DVDNotifyEventHandler m_DVDNotifyDelegate : Public
+    MediaPlayer._MediaPlayerEvents_EndOfStreamEventHandler m_EndOfStreamDelegate : Public
+    MediaPlayer._MediaPlayerEvents_KeyDownEventHandler m_KeyDownDelegate : Public
+    MediaPlayer._MediaPlayerEvents_KeyUpEventHandler m_KeyUpDelegate : Public
+    MediaPlayer._MediaPlayerEvents_KeyPressEventHandler m_KeyPressDelegate : Public
+    MediaPlayer._MediaPlayerEvents_MouseMoveEventHandler m_MouseMoveDelegate : Public
+    MediaPlayer._MediaPlayerEvents_MouseDownEventHandler m_MouseDownDelegate : Public
+    MediaPlayer._MediaPlayerEvents_MouseUpEventHandler m_MouseUpDelegate : Public
+    MediaPlayer._MediaPlayerEvents_ClickEventHandler m_ClickDelegate : Public
+    MediaPlayer._MediaPlayerEvents_DblClickEventHandler m_DblClickDelegate : Public
+    MediaPlayer._MediaPlayerEvents_OpenStateChangeEventHandler m_OpenStateChangeDelegate : Public
+    MediaPlayer._MediaPlayerEvents_PlayStateChangeEventHandler m_PlayStateChangeDelegate : Public
+    MediaPlayer._MediaPlayerEvents_ScriptCommandEventHandler m_ScriptCommandDelegate : Public
+    MediaPlayer._MediaPlayerEvents_BufferingEventHandler m_BufferingDelegate : Public
+    MediaPlayer._MediaPlayerEvents_ErrorEventHandler m_ErrorDelegate : Public
+    MediaPlayer._MediaPlayerEvents_MarkerHitEventHandler m_MarkerHitDelegate : Public
+    MediaPlayer._MediaPlayerEvents_WarningEventHandler m_WarningDelegate : Public
+    MediaPlayer._MediaPlayerEvents_NewStreamEventHandler m_NewStreamDelegate : Public
+    MediaPlayer._MediaPlayerEvents_DisconnectEventHandler m_DisconnectDelegate : Public
+    MediaPlayer._MediaPlayerEvents_ReadyStateChangeEventHandler m_ReadyStateChangeDelegate : Public
+    Int32 m_dwCookie : Public
+  Methods:
+    DVDNotify(Int32, Int32, Int32): PrivateScope, Public, Virtual
+    EndOfStream(Int32): PrivateScope, Public, Virtual
+    KeyDown(Int16, Int16): PrivateScope, Public, Virtual
+    KeyUp(Int16, Int16): PrivateScope, Public, Virtual
+    KeyPress(Int16): PrivateScope, Public, Virtual
+    MouseMove(Int16, Int16, Int32, Int32): PrivateScope, Public, Virtual
+    MouseDown(Int16, Int16, Int32, Int32): PrivateScope, Public, Virtual
+    MouseUp(Int16, Int16, Int32, Int32): PrivateScope, Public, Virtual
+    Click(Int16, Int16, Int32, Int32): PrivateScope, Public, Virtual
+    DblClick(Int16, Int16, Int32, Int32): PrivateScope, Public, Virtual
+    OpenStateChange(Int32, Int32): PrivateScope, Public, Virtual
+    PlayStateChange(Int32, Int32): PrivateScope, Public, Virtual
+    ScriptCommand(String, String): PrivateScope, Public, Virtual
+    Buffering(Boolean): PrivateScope, Public, Virtual
+    Error(): PrivateScope, Public, Virtual
+    MarkerHit(Int32): PrivateScope, Public, Virtual
+    Warning(Int32, Int32, String): PrivateScope, Public, Virtual
+    NewStream(): PrivateScope, Public, Virtual
+    Disconnect(Int32): PrivateScope, Public, Virtual
+    ReadyStateChange(MPReadyStateConstants): PrivateScope, Public, Virtual

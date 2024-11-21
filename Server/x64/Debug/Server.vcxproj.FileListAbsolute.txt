@@ -1,0 +1,7 @@
+D:\ОС\лаби\lab.9\Server\Server\x64\Debug\Server.vcxproj.AssemblyReference.cache
+D:\ОС\лаби\lab.9\Server\Server\x64\Debug\Server.ServerForm.resources
+D:\ОС\лаби\lab.9\Server\Server\x64\Debug\Server.vcxproj.GenerateResource.cache
+D:\2 kurs\3 sem\os\labs\os_team_9\OS_9_Server\Server\x64\Debug\Server.vcxproj.AssemblyReference.cache
+D:\2 kurs\3 sem\os\labs\os_team_9\OS_9_Server\Server\x64\Debug\Server.vcxproj.ResolveComReference.cache
+D:\2 kurs\3 sem\os\labs\os_team_9\OS_9_Server\Server\x64\Debug\Server.ServerForm.resources
+D:\2 kurs\3 sem\os\labs\os_team_9\OS_9_Server\Server\x64\Debug\Server.vcxproj.GenerateResource.cache

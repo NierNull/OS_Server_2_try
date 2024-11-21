@@ -1,0 +1,54 @@
+  Server.ServerForm.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly Server, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Interop.WMPLib.1.0, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly Interop.MediaPlayer.1.0, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly Interop.WMPDXMLib.1.0, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly Interop.WMPLauncher.1.0, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly System.Net.Sockets, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Text.RegularExpressions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.IO, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Class Server.ServerForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Collections.Generic.List`1[System.Net.Sockets.TcpClient] clients : Public, Static
+    System.Collections.Generic.List`1[System.String] logined : Public, Static
+    Boolean moderate : Public, Static
+    Int32 bdwordcount : Public, Static
+    Server.ServerForm instance : Public, Static
+  Properties:
+    System.Net.IPAddress IPAddress 'get set' : 
+  Methods:
+    get_IPAddress(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_IPAddress(IPAddress): PrivateScope, Public, Static, HideBySig, SpecialName
+    FindIP(): PrivateScope, Public, HideBySig
+    Main(): PrivateScope, Public, HideBySig
+    HandleClientAsync(TcpClient): PrivateScope, Public, HideBySig
+    UpdateLabel(String): PrivateScope, Public, HideBySig
+    ProcessClient(Object): PrivateScope, Public, HideBySig
+    CensorBadWords(String, List`1): PrivateScope, Public, HideBySig
+    UpdateDataGridView(): PrivateScope, Public, HideBySig
+    PromptUserForSignupConfirmation(String): PrivateScope, Public, HideBySig

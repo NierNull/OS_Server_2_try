@@ -1,0 +1,5 @@
+﻿  ServerForm.cpp
+D:\2 kurs\3 sem\os\labs\os_team_9\OS_9_Server\Server\ServerForm.cpp(72,44): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\2 kurs\3 sem\os\labs\os_team_9\OS_9_Server\Server\ServerForm.cpp(467,61): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  main.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Server.vcxproj -> D:\2 kurs\3 sem\os\labs\os_team_9\OS_9_Server\x64\Debug\Server.exe
